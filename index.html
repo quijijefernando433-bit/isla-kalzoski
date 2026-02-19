@@ -3,299 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Isla Calzoski · Archivos Secretos</title>
+    <title>Isla Calzoski · Archivos Secretos · V5 (Opción múltiple = texto puro)</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* === TEMA JOMATECH / Isla Calzoski === */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-        body {
-            background-color: #0a0a0f;
-            color: #ffffff;
-            overflow-x: hidden;
-        }
-        .top-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 5%;
-            background: rgba(10, 10, 15, 0.9);
-            backdrop-filter: blur(8px);
-            border-bottom: 1px solid rgba(0, 242, 255, 0.2);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        .logo {
-            font-size: 2rem;
-            font-weight: 800;
-            background: linear-gradient(90deg, #00f2ff, #bd00ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .logo span {
-            background: linear-gradient(90deg, #ffaa00, #ff5500);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 900;
-        }
-        .nav-links {
-            display: flex;
-            gap: 20px;
-            list-style: none;
-        }
-        .nav-links a {
-            color: #ccc;
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: 0.3s;
-        }
-        .nav-links a:hover {
-            color: #00f2ff;
-        }
-        /* === CUESTIONARIO === */
-        .quiz-section {
-            min-height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 60px 20px;
-            background: radial-gradient(circle at 30% 30%, #1a1a2a, #050505);
-        }
-        .quiz-card {
-            background: rgba(20, 20, 30, 0.7);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(0, 242, 255, 0.2);
-            border-radius: 40px;
-            padding: 40px 30px;
-            max-width: 750px;
-            width: 100%;
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 242, 255, 0.2);
-        }
-        .timer-container {
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 2rem;
-            font-weight: 800;
-            background: rgba(0,0,0,0.4);
-            padding: 10px;
-            border-radius: 60px;
-            border: 1px solid #00f2ff30;
-        }
-        .timer {
-            color: #00f2ff;
-            background: #0a0a1a;
-            padding: 8px 25px;
-            border-radius: 50px;
-            display: inline-block;
-            box-shadow: 0 0 15px #00f2ff;
-        }
-        .timer.warning {
-            color: #ffaa00;
-            box-shadow: 0 0 15px #ffaa00;
-        }
-        .timer.danger {
-            color: #ff5555;
-            box-shadow: 0 0 20px #ff0000;
-            animation: pulse 1s infinite;
-        }
+        /* ========== ESTILOS COMPLETOS (los mismos de siempre) ========== */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: #0a0a0f; color: #ffffff; overflow-x: hidden; }
+        .top-bar { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; background: rgba(10, 10, 15, 0.9); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(0, 242, 255, 0.2); position: sticky; top: 0; z-index: 100; }
+        .logo { font-size: 2rem; font-weight: 800; background: linear-gradient(90deg, #00f2ff, #bd00ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .logo span { background: linear-gradient(90deg, #ffaa00, #ff5500); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 900; }
+        .nav-links { display: flex; gap: 20px; list-style: none; }
+        .nav-links a { color: #ccc; text-decoration: none; font-size: 0.95rem; transition: 0.3s; }
+        .nav-links a:hover { color: #00f2ff; }
+        .quiz-section { min-height: 80vh; display: flex; align-items: center; justify-content: center; padding: 60px 20px; background: radial-gradient(circle at 30% 30%, #1a1a2a, #050505); }
+        .quiz-card { background: rgba(20, 20, 30, 0.7); backdrop-filter: blur(15px); border: 1px solid rgba(0, 242, 255, 0.2); border-radius: 40px; padding: 40px 30px; max-width: 750px; width: 100%; box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 242, 255, 0.2); }
+        .timer-container { text-align: center; margin-bottom: 30px; font-size: 2rem; font-weight: 800; background: rgba(0,0,0,0.4); padding: 10px; border-radius: 60px; border: 1px solid #00f2ff30; }
+        .timer { color: #00f2ff; background: #0a0a1a; padding: 8px 25px; border-radius: 50px; display: inline-block; box-shadow: 0 0 15px #00f2ff; }
+        .timer.warning { color: #ffaa00; box-shadow: 0 0 15px #ffaa00; }
+        .timer.danger { color: #ff5555; box-shadow: 0 0 20px #ff0000; animation: pulse 1s infinite; }
         @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.7; } 100% { opacity: 1; } }
-        .question-text {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 30px;
-            line-height: 1.3;
-        }
-        .options-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
-            margin: 30px 0 20px;
-        }
-        .option-btn {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid #333;
-            color: white;
-            padding: 15px 8px;
-            border-radius: 16px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.25s;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .option-btn:hover:not(:disabled) {
-            border-color: #00f2ff;
-            background: rgba(0, 242, 255, 0.1);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 15px rgba(0, 242, 255, 0.2);
-        }
-        .option-btn:disabled {
-            opacity: 0.4;
-            cursor: not-allowed;
-        }
-        .feedback {
-            min-height: 50px;
-            font-size: 1.2rem;
-            font-weight: 500;
-            color: #ffaa66;
-            margin-top: 15px;
-        }
-        /* === ARCHIVOS BLOQUEADOS === */
-        .archive-vault {
-            padding: 60px 20px 80px;
-            background: #000;
-            border-top: 2px solid #1f1f2e;
-        }
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-        }
-        .vault-container {
-            max-width: 1300px;
-            margin: 0 auto;
-            background: rgba(18, 18, 24, 0.8);
-            border-radius: 40px;
-            padding: 40px;
-            border: 1px solid #2a2a3a;
-            backdrop-filter: blur(8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.8);
-            transition: 0.3s;
-        }
-        .vault-locked {
-            filter: blur(8px) grayscale(0.8);
-            pointer-events: none;
-            user-select: none;
-            opacity: 0.5;
-            transition: 0.4s;
-        }
-        .vault-unlocked {
-            filter: none;
-            pointer-events: auto;
-            opacity: 1;
-        }
-        .documents-grid {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-bottom: 30px;
-        }
-        .doc-card {
-            background: linear-gradient(145deg, #1e1e2a, #13131c);
-            border: 1px solid #333c4d;
-            border-radius: 24px;
-            padding: 20px 15px;
-            width: 280px;
-            text-align: center;
-            cursor: pointer;
-            transition: 0.3s;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .doc-card:hover {
-            border-color: #00f2ff;
-            transform: scale(1.05);
-            box-shadow: 0 0 30px rgba(0,242,255,0.3);
-        }
-        .doc-card i {
-            font-size: 3rem;
-            color: #00f2ff;
-            margin-bottom: 10px;
-        }
-        .doc-card h3 {
-            font-size: 1.1rem;
-            margin-bottom: 5px;
-        }
-        .doc-card p {
-            color: #aaa;
-            font-size: 0.75rem;
-            margin-bottom: 10px;
-        }
-        .download-btn {
-            background: transparent;
-            border: 1px solid #00f2ff;
-            color: #00f2ff;
-            border-radius: 30px;
-            padding: 5px 12px;
-            font-size: 0.8rem;
-            cursor: pointer;
-            transition: 0.2s;
-            margin-top: 5px;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .download-btn:hover {
-            background: #00f2ff;
-            color: #000;
-        }
-        .exam-btn {
-            background: transparent;
-            border: 2px solid #ff5555;
-            color: #ff5555;
-            border-radius: 30px;
-            padding: 8px 16px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: 0.2s;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            margin-top: 10px;
-        }
-        .exam-btn:hover {
-            background: #ff5555;
-            color: #000;
-            box-shadow: 0 0 20px #ff5555;
-        }
-        .doc-viewer {
-            background: #0b0b12;
-            border-radius: 30px;
-            padding: 25px;
-            border: 1px solid #2a2a3a;
-            margin-top: 30px;
-        }
-        .doc-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            color: #bbb;
-            border-bottom: 1px solid #2a2a3a;
-            padding-bottom: 15px;
-            margin-bottom: 20px;
-        }
-        .doc-header i {
-            font-size: 2.2rem;
-            color: #00f2ff;
-        }
-        .document-display {
-            background: #f5f5f7;
-            border-radius: 20px;
-            padding: 30px;
-            color: #111;
-            max-height: 600px;
-            overflow-y: auto;
-            font-family: 'Times New Roman', serif;
-            box-shadow: inset 0 0 15px rgba(0,0,0,0.2);
-        }
-        .inner-doc {
-            background: white;
-            padding: 30px 40px;
-            border-radius: 16px;
-            border: 1px solid #ccc;
-            line-height: 1.5;
-        }
+        .question-text { font-size: 2rem; font-weight: 700; margin-bottom: 30px; line-height: 1.3; }
+        .options-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin: 30px 0 20px; }
+        .option-btn { background: rgba(255, 255, 255, 0.05); border: 1px solid #333; color: white; padding: 15px 8px; border-radius: 16px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: all 0.25s; text-transform: uppercase; letter-spacing: 0.5px; }
+        .option-btn:hover:not(:disabled) { border-color: #00f2ff; background: rgba(0, 242, 255, 0.1); transform: translateY(-3px); box-shadow: 0 8px 15px rgba(0, 242, 255, 0.2); }
+        .option-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+        .feedback { min-height: 50px; font-size: 1.2rem; font-weight: 500; color: #ffaa66; margin-top: 15px; }
+        .archive-vault { padding: 60px 20px 80px; background: #000; border-top: 2px solid #1f1f2e; }
+        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 40px; }
+        .vault-container { max-width: 1300px; margin: 0 auto; background: rgba(18, 18, 24, 0.8); border-radius: 40px; padding: 40px; border: 1px solid #2a2a3a; backdrop-filter: blur(8px); box-shadow: 0 20px 40px rgba(0,0,0,0.8); transition: 0.3s; }
+        .vault-locked { filter: blur(8px) grayscale(0.8); pointer-events: none; user-select: none; opacity: 0.5; transition: 0.4s; }
+        .vault-unlocked { filter: none; pointer-events: auto; opacity: 1; }
+        .documents-grid { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin-bottom: 30px; }
+        .doc-card { background: linear-gradient(145deg, #1e1e2a, #13131c); border: 1px solid #333c4d; border-radius: 24px; padding: 20px 15px; width: 280px; text-align: center; cursor: pointer; transition: 0.3s; box-shadow: 0 10px 20px rgba(0,0,0,0.5); display: flex; flex-direction: column; align-items: center; }
+        .doc-card:hover { border-color: #00f2ff; transform: scale(1.05); box-shadow: 0 0 30px rgba(0,242,255,0.3); }
+        .doc-card i { font-size: 3rem; color: #00f2ff; margin-bottom: 10px; }
+        .doc-card h3 { font-size: 1.1rem; margin-bottom: 5px; }
+        .doc-card p { color: #aaa; font-size: 0.75rem; margin-bottom: 10px; }
+        .download-btn { background: transparent; border: 1px solid #00f2ff; color: #00f2ff; border-radius: 30px; padding: 5px 12px; font-size: 0.8rem; cursor: pointer; transition: 0.2s; margin-top: 5px; display: inline-flex; align-items: center; gap: 5px; }
+        .download-btn:hover { background: #00f2ff; color: #000; }
+        .exam-btn { background: transparent; border: 2px solid #ff5555; color: #ff5555; border-radius: 30px; padding: 8px 16px; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: 0.2s; display: inline-flex; align-items: center; gap: 8px; margin-top: 10px; }
+        .exam-btn:hover { background: #ff5555; color: #000; box-shadow: 0 0 20px #ff5555; }
+        .doc-viewer { background: #0b0b12; border-radius: 30px; padding: 25px; border: 1px solid #2a2a3a; margin-top: 30px; }
+        .doc-header { display: flex; align-items: center; gap: 15px; color: #bbb; border-bottom: 1px solid #2a2a3a; padding-bottom: 15px; margin-bottom: 20px; }
+        .doc-header i { font-size: 2.2rem; color: #00f2ff; }
+        .document-display { background: #f5f5f7; border-radius: 20px; padding: 30px; color: #111; max-height: 600px; overflow-y: auto; font-family: 'Times New Roman', serif; box-shadow: inset 0 0 15px rgba(0,0,0,0.2); }
+        .inner-doc { background: white; padding: 30px 40px; border-radius: 16px; border: 1px solid #ccc; line-height: 1.5; }
         .inner-doc h1 { color: #0054a6; font-size: 2rem; }
         .inner-doc h2 { font-size: 1.6rem; margin-top: 1.5rem; }
         .inner-doc h3 { font-size: 1.3rem; margin-top: 1.2rem; }
@@ -305,279 +58,54 @@
         .inner-doc table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
         .inner-doc th, .inner-doc td { border: 1px solid #aaa; padding: 8px; }
         .hidden-doc { display: none; }
-        .status-badge {
-            display: inline-block;
-            background: #2a2a3a;
-            padding: 6px 16px;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            color: #aaa;
-            margin-bottom: 20px;
-        }
-        .status-badge.unlocked {
-            background: #00f2ff20;
-            color: #00f2ff;
-            border: 1px solid #00f2ff;
-        }
-        .timeout-message {
-            text-align: center;
-            font-size: 2rem;
-            padding: 40px;
-            color: #ff5555;
-        }
-        /* Modal Examen */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.95);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-        .modal-content {
-            background: #1a1a2a;
-            border-radius: 40px;
-            padding: 40px;
-            max-width: 1000px;
-            width: 100%;
-            max-height: 85vh;
-            overflow-y: auto;
-            border: 2px solid #00f2ff;
-            box-shadow: 0 0 50px #00f2ff50;
-            color: white;
-        }
-        .modal-header {
-            font-size: 2rem;
-            font-weight: 800;
-            margin-bottom: 20px;
-            text-align: center;
-            color: #00f2ff;
-        }
-        .question-block {
-            background: #0f0f1a;
-            border-radius: 20px;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-left: 5px solid #ffaa00;
-        }
-        .question-text-exam {
-            font-weight: 600;
-            margin-bottom: 15px;
-            white-space: pre-wrap;
-        }
-        .options-exam {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 10px;
-            margin-bottom: 15px;
-        }
-        .option-exam {
-            background: #2a2a3a;
-            padding: 10px;
-            border-radius: 12px;
-            cursor: pointer;
-            transition: 0.2s;
-            border: 2px solid transparent;
-        }
-        .option-exam:hover {
-            background: #3a3a5a;
-        }
-        .option-exam.selected-correct {
-            background: #00aa0030;
-            border-color: #00ff00;
-            box-shadow: 0 0 10px #00ff00;
-        }
-        .option-exam.selected-incorrect {
-            background: #aa000030;
-            border-color: #ff5555;
-            box-shadow: 0 0 10px #ff5555;
-            text-decoration: line-through;
-        }
-        .option-exam.correct-answer {
-            background: #00aa0030;
-            border-color: #00ff00;
-            font-weight: 600;
-        }
-        .option-exam.selected {
-            background: #00f2ff30;
-            border-color: #00f2ff;
-            box-shadow: 0 0 10px #00f2ff;
-        }
-        .feedback-theory {
-            background: #2a2a3a;
-            border-left: 4px solid #00f2ff;
-            padding: 12px 15px;
-            margin: 10px 0 0 0;
-            border-radius: 10px;
-            font-size: 0.95rem;
-            color: #ccc;
-        }
-        .feedback-theory strong {
-            color: #00f2ff;
-        }
-        .true-false-container {
-            display: flex;
-            gap: 20px;
-            margin-top: 5px;
-            margin-bottom: 10px;
-        }
-        .tf-option {
-            background: #2a2a3a;
-            padding: 8px 20px;
-            border-radius: 30px;
-            cursor: pointer;
-            border: 2px solid transparent;
-            transition: 0.2s;
-            font-weight: 600;
-        }
-        .tf-option:hover {
-            background: #3a3a5a;
-        }
-        .tf-option.selected-true, .tf-option.selected-false {
-            background: #00f2ff30;
-            border-color: #00f2ff;
-        }
-        .tf-option.correct-tf {
-            background: #00aa0030;
-            border-color: #00ff00;
-        }
-        .tf-option.incorrect-tf {
-            background: #aa000030;
-            border-color: #ff5555;
-            text-decoration: line-through;
-        }
-        .development-textarea {
-            width: 100%;
-            padding: 15px;
-            border-radius: 15px;
-            background: #2a2a3a;
-            border: 1px solid #444;
-            color: white;
-            font-size: 1rem;
-            margin: 10px 0;
-            resize: vertical;
-        }
-        .blank-input {
-            background: #1a1a2a;
-            border: 1px solid #00f2ff;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            margin: 0 5px;
-            width: 120px;
-            display: inline-block;
-        }
-        .exam-actions {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 30px;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-        .submit-exam-btn {
-            background: #00f2ff;
-            color: #000;
-            font-weight: 800;
-            padding: 15px 30px;
-            border-radius: 50px;
-            border: none;
-            cursor: pointer;
-            font-size: 1.2rem;
-        }
-        .close-exam-btn {
-            background: #ff5555;
-            color: white;
-            font-weight: 800;
-            padding: 15px 30px;
-            border-radius: 50px;
-            border: none;
-            cursor: pointer;
-            font-size: 1.2rem;
-        }
-        .result-box {
-            background: #00f2ff20;
-            border: 2px solid #00f2ff;
-            border-radius: 30px;
-            padding: 30px;
-            margin-top: 30px;
-            text-align: center;
-            display: none;
-        }
-        .result-score {
-            font-size: 4rem;
-            font-weight: 900;
-            color: #ffaa00;
-        }
-        .result-recommendation {
-            font-size: 1.2rem;
-            margin-top: 15px;
-            color: #ccc;
-        }
-        .matching-item {
-            padding: 10px;
-            margin: 5px 0;
-            background: #1a1a2a;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: 0.2s;
-            border: 2px solid transparent;
-        }
-        .matching-item:hover {
-            background: #3a3a5a;
-        }
-        .matching-item.selected {
-            background: #00f2ff30;
-            border-color: #00f2ff;
-        }
-        .datos-box {
-            background: #1a2a3a;
-            border: 1px solid #00f2ff;
-            border-radius: 10px;
-            padding: 15px;
-            margin: 10px 0;
-            font-family: monospace;
-            color: #aaddff;
-        }
-        .datos-box strong {
-            color: #00f2ff;
-        }
-        footer {
-            padding: 30px;
-            text-align: center;
-            color: #666;
-            border-top: 1px solid #222;
-        }
+        .status-badge { display: inline-block; background: #2a2a3a; padding: 6px 16px; border-radius: 50px; font-size: 0.9rem; color: #aaa; margin-bottom: 20px; }
+        .status-badge.unlocked { background: #00f2ff20; color: #00f2ff; border: 1px solid #00f2ff; }
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 1000; justify-content: center; align-items: center; padding: 20px; }
+        .modal-content { background: #1a1a2a; border-radius: 40px; padding: 40px; max-width: 1200px; width: 100%; max-height: 85vh; overflow-y: auto; border: 2px solid #00f2ff; box-shadow: 0 0 50px #00f2ff50; color: white; }
+        .modal-header { font-size: 2rem; font-weight: 800; margin-bottom: 20px; text-align: center; color: #00f2ff; }
+        .question-block { background: #0f0f1a; border-radius: 20px; padding: 20px; margin-bottom: 20px; border-left: 5px solid #ffaa00; }
+        .question-text-exam { font-weight: 600; margin-bottom: 15px; white-space: pre-wrap; }
+        .options-exam { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-bottom: 15px; }
+        .option-exam { background: #2a2a3a; padding: 10px; border-radius: 12px; cursor: pointer; transition: 0.2s; border: 2px solid transparent; }
+        .option-exam:hover { background: #3a3a5a; }
+        .option-exam.selected-correct { background: #00aa0030; border-color: #00ff00; box-shadow: 0 0 10px #00ff00; }
+        .option-exam.selected-incorrect { background: #aa000030; border-color: #ff5555; box-shadow: 0 0 10px #ff5555; text-decoration: line-through; }
+        .option-exam.correct-answer { background: #00aa0030; border-color: #00ff00; font-weight: 600; }
+        .option-exam.selected { background: #00f2ff30; border-color: #00f2ff; box-shadow: 0 0 10px #00f2ff; }
+        .feedback-theory { background: #2a2a3a; border-left: 4px solid #00f2ff; padding: 12px 15px; margin: 10px 0; border-radius: 10px; color: #ccc; }
+        .true-false-container { display: flex; gap: 20px; margin: 5px 0 10px; }
+        .tf-option { background: #2a2a3a; padding: 8px 20px; border-radius: 30px; cursor: pointer; border: 2px solid transparent; font-weight: 600; }
+        .tf-option:hover { background: #3a3a5a; }
+        .selected-true, .selected-false { background: #00f2ff30; border-color: #00f2ff; }
+        .correct-tf { background: #00aa0030; border-color: #00ff00; }
+        .incorrect-tf { background: #aa000030; border-color: #ff5555; text-decoration: line-through; }
+        .development-textarea { width: 100%; padding: 15px; border-radius: 15px; background: #2a2a3a; border: 1px solid #444; color: white; font-size: 1rem; margin: 10px 0; resize: vertical; }
+        .blank-input { background: #1a1a2a; border: 1px solid #00f2ff; color: white; padding: 5px 10px; border-radius: 5px; margin: 0 5px; width: 120px; display: inline-block; }
+        .exam-actions { display: flex; justify-content: space-between; margin-top: 30px; gap: 15px; flex-wrap: wrap; }
+        .submit-exam-btn { background: #00f2ff; color: #000; font-weight: 800; padding: 15px 30px; border-radius: 50px; border: none; cursor: pointer; font-size: 1.2rem; }
+        .close-exam-btn { background: #ff5555; color: #fff; font-weight: 800; padding: 15px 30px; border-radius: 50px; border: none; cursor: pointer; font-size: 1.2rem; }
+        .result-box { background: #00f2ff20; border: 2px solid #00f2ff; border-radius: 30px; padding: 30px; margin-top: 30px; text-align: center; display: none; }
+        .result-score { font-size: 4rem; font-weight: 900; color: #ffaa00; }
+        .datos-box { background: #1a2a3a; border: 1px solid #00f2ff; border-radius: 10px; padding: 15px; margin: 10px 0; font-family: monospace; color: #aaddff; }
+        footer { padding: 30px; text-align: center; color: #666; border-top: 1px solid #222; }
     </style>
 </head>
 <body>
-
-<div class="top-bar">
-    <div class="logo">Isla <span>Calzoski</span></div>
-    <ul class="nav-links">
-        <li><a href="#">·00·</a></li>
-        <li><a href="#">·01·</a></li>
-    </ul>
-</div>
+<div class="top-bar"><div class="logo">Isla <span>Calzoski</span></div><ul class="nav-links"><li><a href="#">·00·</a></li><li><a href="#">·01·</a></li></ul></div>
 
 <!-- ===== CUESTIONARIO INICIAL ===== -->
 <section class="quiz-section" id="quizSection">
     <div class="quiz-card">
-        <div class="timer-container">
-            <span class="timer" id="timerDisplay">15</span> <span style="font-size:1rem;">segundos</span>
-        </div>
+        <div class="timer-container"><span class="timer" id="timerDisplay">15</span> <span style="font-size:1rem;">segundos</span></div>
         <div id="pregunta-contenedor"></div>
         <div id="feedback" class="feedback"></div>
-        <div style="margin-top: 25px; color: #444; font-size: 0.9rem;">
-            <i class="fas fa-skull"></i> sólo almas valientes
-        </div>
+        <div style="margin-top:25px; color:#444;"><i class="fas fa-skull"></i> sólo almas valientes</div>
     </div>
 </section>
 
 <!-- ===== ARCHIVOS ===== -->
 <section class="archive-vault" id="archiveVault">
-    <div style="max-width: 1300px; margin: 0 auto; padding: 0 20px;">
+    <div style="max-width:1300px; margin:0 auto; padding:0 20px;">
         <h2 class="section-title"><span class="gradient-text">📁 Bóveda de Documentos</span></h2>
         <div id="accessBadge" class="status-badge">🔒 BLOQUEADO · Responde correctamente</div>
         <div class="vault-container" id="vaultContent">
@@ -607,12 +135,9 @@
 
             <!-- VISOR DE DOCUMENTO ACTIVO -->
             <div class="doc-viewer" id="docViewer">
-                <div class="doc-header">
-                    <i class="fas fa-file-alt" id="currentDocIcon"></i>
-                    <h3 id="currentDocTitle">Selecciona un archivo</h3>
-                </div>
+                <div class="doc-header"><i class="fas fa-file-alt" id="currentDocIcon"></i><h3 id="currentDocTitle">Selecciona un archivo</h3></div>
                 <div class="document-display" id="documentDisplay">
-                    <!-- DOCUMENTO SOCIALES -->
+                    <!-- DOCUMENTO SOCIALES (contenido COMPLETO) -->
                     <div id="docSociales" class="inner-doc hidden-doc">
                         <h1>Resumen: Conflictos y Fronteras en América Latina</h1>
                         <h2>1. Situación General</h2>
@@ -622,7 +147,7 @@
                         <ul><li><strong>Causas principales:</strong> <ul><li><strong>Brasil:</strong> Necesitaba libre navegación por el río Paraná para llegar a la región de Mato Grosso.</li><li><strong>Argentina:</strong> Interés en los territorios de las "Misiones"</li><li><strong>Geopolítica:</strong> Brasil buscaba romper el equilibrio entre los países de la Cuenca del Plata.</li><li><strong>Detonante:</strong> La defensa de Paraguay al gobierno uruguayo que había sido derrocado.</li></ul></li><li><strong>Desarrollo del conflicto</strong> <ol><li>Paraguay captura un buque brasileño e invade Mato Grosso. Declara la guerra a Argentina.</li><li>Los aliados toman Asunción (la capital). El Mariscal López (líder paraguayo) realiza purgas internas.</li><li>López es finalmente derrotado y asesinado en Cerro Corá (1870), poniendo fin a la guerra.</li></ol></li><li><strong>Consecuencias para Paraguay:</strong> <ul><li><strong>Demográficas:</strong> Murieron unas 90.000 personas (incluyendo niños y ancianos). Fue el conflicto con más víctimas de la región.</li><li><strong>Territoriales:</strong> Perdió el <strong>25% de su territorio</strong> frente a sus vecinos.</li></ul></li></ul>
                         <h2>Guerra del Pacífico (1879-1883)</h2>
                         <p>Este conflicto enfrentó a <strong>Chile</strong> contra la alianza de <strong>Perú y Bolivia</strong>.</p>
-                        <ul><li><strong>Causas principales</strong> <ul><li><strong>Recursos naturales:</strong> Disputa por la explotación de minerales en el desierto de Atacama.</li><li><strong>Confiscación:</strong> Bolivia confiscó bienes de compañías chilenas que extraían minerales en dicho desierto.</li><li><strong>Alianzas:</strong> Bolivia y Perú tenían un pacto de defensa mutua apoyado por EE. UU., mientras que Chile contaba con el apoyo de Gran Bretaña.</li></ul></li><li><strong>Campañas y Eventos</strong> <ul><li><strong>Campaña Marítima:</strong> Chile toma el puerto de Antofagasta (Bolivia) y logra el control del mar.</li><li><strong>Campaña de Tarapacá:</strong> Se pelea en Perú; la ocupación chilena provoca la caída de los gobiernos peruano y boliviano.</li><li><strong>Campaña de Tacna y Arica:</strong> Chile se apodera de estas zonas; Bolivia se retira de la guerra.</li><li><strong>Campaña de Lima y de la Sierra:</strong> Chile toma la capital peruana en 1881 y derrota a peru en la batalla de Huamachuco.</li></ul></li><li><strong>Consecuencias</strong> <ul><li><strong>Territorio:</strong> Bolivia perdió su salida al mar y Perú entregó Arica a Chile.</li><li><strong>Economía:</strong> Bolivia quedó en crisis económica y Perú sufrió un bloqueo en sus zonas de salitre, guano y azúcar.</li><li><strong>Vidas:</strong> Chile perdió unos 3,000 hombres; la alianza Perú-Bolivia perdió 15,000.</li><li><strong>Gran Bretaña:</strong> Salió beneficiada al obtener acceso y control sobre los recursos de la zona.</li></ul></li></ul>
+                        <ul><li><strong>Causas principales</strong> <ul><li><strong>Recursos naturales:</strong> Disputa por la explotación de minerales en el desierto de Atacama.</li><li><strong>Confiscación:</strong> Bolivia confiscó bienes de compañías chilenas que extraían minerales en dicho desierto.</li><li><strong>Alianzas:</strong> Bolivia y Perú tenían un pacto de defensa mutua apoyado por EE. UU., mientras que Chile contaba con el apoyo de Gran Bretaña.</li></ul></li><li><strong>Campañas y Eventos</strong> <ul><li><strong>Campaña Marítima:</strong> Chile toma el puerto de Antofagasta (Bolivia) y logra el control del mar.</li><li><strong>Campaña de Tarapacá:</strong> Se pelea en Perú; la ocupación chilena provoca la caída de los gobiernos peruano y boliviano.</li><li><strong>Campaña de Tacna y Arica:</strong> Chile se apodera de estas zonas; Bolivia se retira de la guerra.</li><li><strong>Campaña de Lima y de la Sierra:</strong> Chile toma la capital peruana en 1881 y derrota a Perú en la batalla de Huamachuco.</li></ul></li><li><strong>Consecuencias</strong> <ul><li><strong>Territorio:</strong> Bolivia perdió su salida al mar y Perú entregó Arica a Chile.</li><li><strong>Economía:</strong> Bolivia quedó en crisis económica y Perú sufrió un bloqueo en sus zonas de salitre, guano y azúcar.</li><li><strong>Vidas:</strong> Chile perdió unos 3,000 hombres; la alianza Perú-Bolivia perdió 15,000.</li><li><strong>Gran Bretaña:</strong> Salió beneficiada al obtener acceso y control sobre los recursos de la zona.</li></ul></li></ul>
                         <h2>Conflicto Ecuador-Perú (1995-1999)</h2>
                         <p>Conocido como la <strong>Guerra del Cenepa</strong>, fue el último gran conflicto fronterizo entre ambos países.</p>
                         <ul><li><strong>Causas</strong> <ul><li><strong>Límites mal definidos:</strong> Problemas con el Tratado de Río de Janeiro de 1942.</li><li><strong>Amazonía:</strong> Ecuador reclamaba navegación en el Amazonas y la posesión del Valle del Cenepa.</li><li><strong>Tensión militar:</strong> Ecuador estableció puestos fronterizos que Perú vio como una amenaza directa.</li></ul></li><li><strong>Eventos Importantes</strong> <ul><li>Ecuador capturó una patrulla peruana en el Alto Cenepa, iniciando el fuego.</li><li>Perú atacó puestos ecuatorianos como Tiwintza, pero Ecuador logró frenar los avances.</li><li>Ante la falta de una victoria clara, Perú decidió un cese al fuego para iniciar el proceso de paz.</li></ul></li><li><strong>Consecuencias</strong> <ul><li><strong>Humanas y Económicas:</strong> Gran cantidad de víctimas y economías debilitadas en ambos países.</li><li><strong>Navegación:</strong> Ecuador obtuvo acceso a la navegación del río Amazonas, pero sin soberanía sobre él.</li><li><strong>Acuerdos territoriales:</strong> Se entregó a Ecuador <strong>1 km²</strong> en Tiwintza (solo como propiedad privada, en honor a sus soldados), mientras que Ecuador entregó a Perú parte de la Cordillera del Cóndor.</li></ul></li></ul>
@@ -632,13 +157,13 @@
                         <h3>🇷🇺🇺🇦 Conflicto Rusia-Ucrania</h3>
                         <ul><li>Exportaciones a Ucrania: <strong>casi nulas</strong>.</li><li>Exportaciones a Rusia: <strong>bajaron 63%</strong>.</li><li>Inflación en Ecuador en 2022: <strong>3,38%</strong>.</li></ul><p><strong>Acciones de Ecuador:</strong></p><ul><li>Condena la guerra y pide proteger civiles.</li><li>Apoya paz y diálogo en la ONU.</li></ul>
                         <h2>Movilización social e integración regional</h2>
-                        <h3>Latinoamerica en la primera mitad del siglo XX</h3>
+                        <h3>Latinoamérica en la primera mitad del siglo XX</h3>
                         <ul><li>Los gobiernos estaban en manos de los grupos poderosos</li><li>La economía estaba basada en la explotación de materias primas bajo un sistema redistributivo inequitativo</li><li>Tras la <strong>Gran Depresión de 1929</strong>, se impulsó la <strong>industrialización por sustitución de importaciones</strong>, es decir, producir dentro del país lo que antes se compraba afuera.</li><li>La <strong>clase media</strong> creció y ganó importancia como grupo social y político.</li><li>Los <strong>sectores industriales</strong> crecieron y tuvieron mayor protagonismo en la política</li></ul>
                         <h3>América latina en la segunda mitad del siglo XX</h3>
-                        <p>Estaba influenciada por la guerra fría como por ejemplo pior los países capitalistas liderados por estados unidos y los países comunistas liderados por la Unión soviética y esto causó una gran polarización ideológica</p>
+                        <p>Estaba influenciada por la guerra fría como por ejemplo por los países capitalistas liderados por estados unidos y los países comunistas liderados por la Unión soviética y esto causó una gran polarización ideológica</p>
                         <h4>Contexto económico:</h4><ul><li>hay un repunte en la producción de bienes de consumo</li><li>se vivía en un auge económico en el mundo pero en latam la economía estaba estancada</li><li>los procesos de industrialización causaron un descontento popular</li><li>la economía dependía de tecnología del extranjero</li></ul>
                         <h4>contexto social:</h4><ul><li>el incremento de población abundante permitió que muchos jóvenes ingresen al mundo laboral</li><li>dentro de la iglesia nace la teología de la liberación</li><li>la desigualdad provoca que la población no tenga acceso a los bienes y servicios</li><li>dentro de lo rural mantenían esquemas de explotación</li></ul>
-                        <h4>contexto político</h4><ul><li>los gobiernos tomsron 2 caminos : el primero era revolución y el segundo integración del modelo capitalista</li><li>los gobiernos recibían presión por parte de que america latina tenia una mayor presencia del bloque de estados unidos y el capitalismo</li><li>los gobiernos cayeron en manos de los dictadores</li></ul>
+                        <h4>contexto político</h4><ul><li>los gobiernos tomaron 2 caminos : el primero era revolución y el segundo integración del modelo capitalista</li><li>los gobiernos recibían presión por parte de que america latina tenia una mayor presencia del bloque de estados unidos y el capitalismo</li><li>los gobiernos cayeron en manos de los dictadores</li></ul>
                         <h2>Auge de las Dictaduras Militares</h2>
                         <p>En el contexto de la <strong>Guerra Fría</strong>, las superpotencias influyeron en América Latina para ganar aliados:</p>
                         <ul><li><strong>Influencia de EE. UU.:</strong> Implementó la <strong>«Operación Cóndor»</strong> para frenar gobiernos socialistas y entrenó soldados bajo la <strong>Doctrina de Seguridad Nacional</strong>.</li><li><strong>Influencia de la URSS:</strong> Tras la Revolución cubana, apoyó a movimientos guerrilleros de izquierda para tomar el poder.</li></ul>
@@ -679,7 +204,7 @@
                         <h3>tipos</h3><ul><li><strong>Intrínsecos:</strong> Todas las personas nacen con ellos; son parte de nuestra naturaleza.</li><li><strong>Irrenunciables:</strong> No puedes renunciar a ellos ni trasladarlos a otra persona, ni siquiera por voluntad propia.</li><li><strong>Inalienables:</strong> No se pueden quitar ni cancelar bajo ninguna circunstancia legal o personal.</li><li><strong>Universales:</strong> Son iguales para todos en cualquier lugar del mundo, sin discriminación alguna.</li><li><strong>Interdependientes:</strong> Todos están conectados; el avance de un derecho ayuda al progreso de los demás.</li><li><strong>Indivisibles:</strong> Tienen el mismo valor y jerarquía; no se puede quitar uno para disfrutar de otro.</li><li><strong>Progresivos:</strong> Una vez establecidos, no hay marcha atrás; siempre deben evolucionar para mejorar.</li><li><strong>Imprescriptibles:</strong> No tienen fecha de vencimiento; duran toda la vida.</li><li><strong>Inderogables:</strong> No pueden ser anulados por leyes internas, ya que están protegidos por acuerdos internacionales.</li><li><strong>En constante evolución:</strong> Se adaptan a nuevos tiempos, incluyendo ahora temas como el medio ambiente y los derechos digitales.</li></ul>
                     </div>
 
-                    <!-- DOCUMENTO INGLES -->
+                    <!-- DOCUMENTO INGLES (contenido COMPLETO) -->
                     <div id="docIngles" class="inner-doc hidden-doc">
                         <h1>Future going to</h1>
                         <h2>Estructura (forma afirmativa)</h2>
@@ -726,7 +251,7 @@
                         </ol>
                     </div>
 
-                    <!-- DOCUMENTO CIENCIAS (NUEVO) -->
+                    <!-- DOCUMENTO CIENCIAS (contenido COMPLETO) -->
                     <div id="docCiencias" class="inner-doc hidden-doc">
                         <h1>🇪🇨 Regiones naturales del Ecuador</h1>
                         <p>Ecuador es un país <strong>megadiverso</strong> porque tiene muchas regiones con distintos climas y ecosistemas.</p>
@@ -765,13 +290,13 @@
                         <ul><li>Los <strong>hot spots</strong> son zonas con <strong>muchísima biodiversidad y alto endemismo</strong>.</li><li>Ecuador está entre los países megadiversos y tiene <strong>3 de los 10 hot spots del mundo</strong>.</li></ul>
                         
                         <h2>Principio de Arquímedes</h2>
-                        <ul><li>F = mg</li><li>g = siempre será 9,8 m/s²</li></ul>
+                        <ul><li>Empuje = ρ líquido · g · Volumen (multiplicación)</li><li>g = 9,8 m/s²</li></ul>
                         
                         <h2>Fórmula de densidad de los cuerpos</h2>
-                        <ul><li>P = m/v</li><li>P = densidad | m = masa | v = volumen</li></ul>
+                        <ul><li>ρ = m/V (división)</li><li>ρ = densidad | m = masa | V = volumen</li></ul>
                         
                         <h2>Principio de Pascal</h2>
-                        <ul><li>P = f₁/a₁ = f₂/a₂</li><li>Donde f₁ se multiplica cruzadamente con a₂ y a₂ queda como denominador y f₁ queda para descubrir donde f₂ se multiplica con a₁.</li></ul>
+                        <ul><li>F₁/A₁ = F₂/A₂</li><li>F₂ = F₁ · (A₂/A₁) (multiplicación y luego división)</li></ul>
                         
                         <h2>Unidad 5: Aplico mis conocimientos</h2>
                         <ol>
@@ -806,9 +331,7 @@
                         <p>El carbono es importante para la vida porque es la <strong>base de las moléculas orgánicas</strong> (como proteínas, grasas, carbohidratos y ADN), o sea, <strong>sin carbono no se pueden formar los seres vivos</strong>.</p>
                     </div>
 
-                    <div id="placeholderMsg" class="inner-doc">
-                        <p style="text-align: center; color: #666; padding: 40px;">📄 Selecciona un documento de la bóveda.</p>
-                    </div>
+                    <div id="placeholderMsg" class="inner-doc"><p style="text-align:center; color:#666; padding:40px;">📄 Selecciona un documento de la bóveda.</p></div>
                 </div>
             </div>
         </div>
@@ -828,9 +351,7 @@
     </div>
 </div>
 
-<footer>
-    <p>© 2026 · Isla Calzoski · conocimiento reservado</p>
-</footer>
+<footer><p>© 2026 · Isla Calzoski · conocimiento reservado</p></footer>
 
 <script>
 // ========== PREGUNTAS DEL CUESTIONARIO INICIAL ==========
@@ -873,90 +394,11 @@ let currentExamType = null;
 let userAnswers = [];
 let userTFAnswers = [];
 let userDevelopmentAnswers = [];
-let userMatchingA = [];
-let userMatchingB = [];
 let userInglesAnswers = [];
 let userWeatherMatches = [];
-let userFillBlank14 = [];
 let examSubmitted = false;
 
-// ========== PREGUNTAS DE SOCIALES (resumido) ==========
-const examQuestionsSociales = [
-    { question: "1. Durante la Guerra de la Triple Alianza, ¿cuál era el interés geopolítico principal de Brasil que motivó el conflicto?", options: ["a) Anexar el territorio de las 'Misiones'.", "b) Romper el equilibrio entre los países de la Cuenca del Plata y asegurar navegación por el río Paraná.", "c) Defender al gobierno uruguayo que había sido derrocado.", "d) Controlar las minas de salitre en la región de Mato Grosso."], correct: 1, theory: "📜 Brasil buscaba libre navegación por el río Paraná y romper el equilibrio en la Cuenca del Plata." },
-    { question: "2. Según el texto, las tensiones fronterizas en América Latina bajaron significativamente en el periodo de:", options: ["a) 1824 a 1850", "b) 1851 a 1874", "c) 1911 a 1940", "d) 1980 a 1999"], correct: 3, theory: "📜 Se menciona que las tensiones bajaron entre 1980 y 1999." },
-    { question: "3. En la Guerra del Pacífico, ¿cuál fue el detonante económico directo del conflicto?", options: ["a) La confiscación de bienes de compañías chilenas por parte de Bolivia en el desierto de Atacama.", "b) El pacto de defensa mutua entre Perú y Bolivia apoyado por EE. UU.", "c) La toma del puerto de Antofagasta por parte de tropas peruanas.", "d) El bloqueo de las zonas de guano y azúcar en territorio chileno."], correct: 0, theory: "📜 Bolivia confiscó bienes de compañías chilenas que extraían minerales en Atacama." },
-    { question: "4. ¿Qué resolución se tomó respecto a Tiwintza tras el conflicto entre Ecuador y Perú (1995-1999)?", options: ["a) Ecuador obtuvo soberanía total sobre el Valle del Cenepa.", "b) Perú entregó 1 km² a Ecuador como propiedad privada en honor a sus soldados.", "c) Ecuador entregó Tiwintza a Perú a cambio de acceso al río Amazonas.", "d) Se estableció como una zona desmilitarizada bajo control de la ONU."], correct: 1, theory: "📜 Se entregó a Ecuador 1 km² en Tiwintza como propiedad privada." },
-    { question: "5. En relación con el conflicto colombiano, ¿qué hito ocurrió en el año 2001 para Ecuador?", options: ["a) Lucio Gutiérrez ofreció mediación de paz.", "b) Se acordó la instalación de la base de Manta.", "c) Se unió a la iniciativa andina contra el narcotráfico y creó un plan para la frontera norte.", "d) Redactó un documento para fortalecer la política exterior y seguridad con Colombia."], correct: 2, theory: "📜 2001: se une a iniciativa andina contra narcotráfico y crea plan para frontera norte." },
-];
-
-const trueFalseQuestionsSociales = [
-    { question: "16. ( ) Tras la Guerra del Cenepa, Ecuador obtuvo el derecho a la navegación por el río Amazonas y la soberanía total sobre esas aguas.", correct: false, theory: "📜 Obtuvo acceso a navegación, pero sin soberanía." },
-    { question: "17. ( ) En la Guerra de la Triple Alianza, el bando aliado estaba compuesto por Argentina, Brasil y Chile, quienes se enfrentaron a Paraguay.", correct: false, theory: "📜 Aliados: Argentina, Brasil y Uruguay." },
-];
-
-const developmentQuestionsSociales = [
-    { question: "41. Explica las causas principales de la Guerra de la Triple Alianza desde la perspectiva de Brasil y Argentina, y cuál fue el detonante final.", keywords: ["navegación", "paraná", "misiones"], theory: "📜 Brasil necesitaba navegar el Paraná para llegar a Mato Grosso; Argentina quería las Misiones. Detonante: Paraguay defendió al gobierno uruguayo derrocado." },
-];
-
-// ========== PREGUNTAS DE CIENCIAS (30 preguntas) ==========
-const examQuestionsCiencias = [
-    // Opción múltiple (15 preguntas)
-    { question: "1. ¿Cuál de las siguientes estructuras geológicas de Sudamérica es la más antigua?", options: ["a) Cordillera de los Andes", "b) Escudos Guayanés, Brasilia, Patagonia", "c) Amazonía", "d) Páramos"], correct: 1, theory: "📜 Los escudos o macizos Guayanés, Brasilia y Patagonia son las estructuras más antiguas." },
-    { question: "2. ¿Qué región natural del Ecuador es considerada un 'hot spot' mundial de biodiversidad?", options: ["a) Galápagos", "b) El Chocó", "c) Páramos", "d) Matorral interandino"], correct: 1, theory: "📜 El Chocó (Esmeraldas y norte de Manabí) es un hot spot mundial." },
-    { question: "3. ¿Cuál de estos animales es endémico de Galápagos?", options: ["a) Cóndor andino", "b) Oso de anteojos", "c) Iguana marina", "d) Delfín rosado"], correct: 2, theory: "📜 La iguana marina es una especie endémica de Galápagos." },
-    { question: "4. ¿Qué zona natural presenta clima cálido-húmedo?", options: ["a) Sur de Manabí", "b) El Chocó", "c) Páramos", "d) Matorral interandino"], correct: 1, theory: "📜 El Chocó tiene bosques húmedos tropicales con clima cálido-húmedo." },
-    { question: "5. ¿Cuál NO es un objetivo típico de las áreas protegidas?", options: ["a) Conservación de biodiversidad", "b) Protección de fuentes de agua", "c) Oxigenación de los suelos", "d) Preservación de ecosistemas"], correct: 2, theory: "📜 La oxigenación de los suelos no es un objetivo directo de las áreas protegidas." },
-    { question: "6. ¿Qué corriente marina es responsable del fenómeno de 'El Niño' en Ecuador?", options: ["a) Corriente de Humboldt", "b) Corriente cálida sur ecuatorial", "c) Corriente de Perú", "d) Corriente de Cromwell"], correct: 1, theory: "📜 La corriente cálida sur ecuatorial trae lluvias abundantes y causa el fenómeno de El Niño." },
-    { question: "7. ¿Cuál de estos cuerpos tiene menor densidad?", options: ["a) Una piedra", "b) Un costal de algodón", "c) Un bloque de hierro", "d) Agua"], correct: 1, theory: "📜 El algodón tiene menor densidad porque ocupa más volumen con menos masa." },
-    { question: "8. ¿Qué material NO es un fluido?", options: ["a) Agua", "b) Aire", "c) Aceite", "d) Sal"], correct: 3, theory: "📜 La sal es un sólido granular, no un fluido como tal." },
-    { question: "9. ¿Cuál es la fórmula correcta de la densidad?", options: ["a) P = m × v", "b) P = m/v", "c) P = v/m", "d) P = m + v"], correct: 1, theory: "📜 Densidad = masa / volumen (P = m/v)." },
-    { question: "10. ¿Qué biomolécula NO es orgánica?", options: ["a) Proteína", "b) Lípido", "c) Agua", "d) Glúcido"], correct: 2, theory: "📜 El agua es inorgánica; las demás son orgánicas." },
-    { question: "11. ¿En qué estructura celular se encuentran principalmente los ácidos nucleicos?", options: ["a) Membrana celular", "b) Citoplasma", "c) Núcleo y ribosomas", "d) Mitocondrias"], correct: 2, theory: "📜 Los ácidos nucleicos (ADN/ARN) están en el núcleo y ribosomas." },
-    { question: "12. ¿Qué región natural está sobre los 3000 metros y es fuente de agua dulce?", options: ["a) Amazonía", "b) Páramos", "c) Chocó", "d) Galápagos"], correct: 1, theory: "📜 Los páramos están sobre los 3000 m y son fuentes de agua dulce." },
-    { question: "13. ¿Qué tipo de bosque predomina en los Andes noroccidentales?", options: ["a) Bosque seco", "b) Bosque nublado", "c) Bosque de manglar", "d) Bosque de eucalipto"], correct: 1, theory: "📜 Los Andes noroccidentales tienen bosques nublados con mucha biodiversidad." },
-    { question: "14. ¿Cuántos de los 10 hot spots del mundo se encuentran en Ecuador?", options: ["a) 1", "b) 2", "c) 3", "d) 4"], correct: 2, theory: "📜 Ecuador tiene 3 de los 10 hot spots del mundo." },
-    { question: "15. ¿Cuál es el valor aproximado de la gravedad (g) usado en los problemas de física?", options: ["a) 9,8 m/s²", "b) 10 m/s²", "c) 9 m/s²", "d) 8,9 m/s²"], correct: 0, theory: "📜 g = 9,8 m/s² siempre." },
-    
-    // Verdadero/Falso (10 preguntas)
-    { question: "16. ( ) Las Islas Galápagos son de origen volcánico y tienen especies endémicas.", correct: true, theory: "📜 Verdadero: son volcánicas y tienen especies únicas." },
-    { question: "17. ( ) El matorral seco predomina en la zona del Chocó ecuatoriano.", correct: false, theory: "📜 Falso: el Chocó tiene bosques húmedos tropicales, no matorral seco." },
-    { question: "18. ( ) Los bosques nublados de los Andes orientales alimentan la Amazonía con sus aguas.", correct: true, theory: "📜 Verdadero: de sus pendientes bajan aguas que alimentan la Amazonía." },
-    { question: "19. ( ) El clima en los Andes australes cambia según la altura, lo que afecta la vegetación.", correct: true, theory: "📜 Verdadero: la altura determina el clima y la vegetación." },
-    { question: "20. ( ) Las cordilleras amazónicas son una zona geológicamente reciente en Ecuador.", correct: false, theory: "📜 Falso: son una zona antigua del Ecuador." },
-    { question: "21. ( ) La Amazonía ecuatoriana es parte de la gran llanura amazónica y está cubierta por selva.", correct: true, theory: "📜 Verdadero: forma parte de la llanura amazónica." },
-    { question: "22. ( ) La corriente fría de Humboldt trae bajas temperaturas y permite la llegada de vientos cálidos.", correct: false, theory: "📜 Falso: la corriente de Humboldt impide la llegada de vientos cálidos." },
-    { question: "23. ( ) Según el principio de Arquímedes, la fuerza es igual a masa por gravedad (F=mg).", correct: true, theory: "📜 Verdadero: F = mg (peso = masa × gravedad)." },
-    { question: "24. ( ) El principio de Pascal se aplica solo a sólidos, no a fluidos.", correct: false, theory: "📜 Falso: el principio de Pascal se aplica a fluidos poco compresibles." },
-    { question: "25. ( ) El carbono es la base de las moléculas orgánicas como proteínas y ADN.", correct: true, theory: "📜 Verdadero: sin carbono no se pueden formar los seres vivos." },
-    
-    // Desarrollo (5 preguntas) - AHORA CON EJERCICIOS PRÁCTICOS
-    { question: "26. EJERCICIO DE DENSIDAD: Un cuerpo tiene una masa de 240 g y ocupa un volumen de 120 cm³. Calcula su densidad en g/cm³.", 
-      datos: "📊 DATOS: m = 240 g, v = 120 cm³, P = ?",
-      answer: 2, 
-      theory: "📜 P = m/v = 240 g / 120 cm³ = 2 g/cm³" },
-    
-    { question: "27. EJERCICIO DE PRINCIPIO DE PASCAL: En una prensa hidráulica, el émbolo pequeño tiene un área de 4 m² y el émbolo grande 20 m². Si se aplica una fuerza de 8 N en el émbolo pequeño, ¿qué fuerza se obtiene en el émbolo grande? (F₂ = ?)", 
-      datos: "📊 DATOS: A₁ = 4 m², A₂ = 20 m², F₁ = 8 N, F₂ = ?",
-      answer: 40, 
-      theory: "📜 F₁/A₁ = F₂/A₂ → 8/4 = F₂/20 → 2 = F₂/20 → F₂ = 40 N" },
-    
-    { question: "28. EJERCICIO DE PRINCIPIO DE ARQUÍMEDES: Un objeto pesa 50 N en el aire y 30 N sumergido en agua. ¿Cuál es el empuje que experimenta?", 
-      datos: "📊 DATOS: Peso real = 50 N, Peso aparente = 30 N, Empuje = ?",
-      answer: 20, 
-      theory: "📜 Empuje = Peso real - Peso aparente = 50 N - 30 N = 20 N" },
-    
-    { question: "29. EJERCICIO DE DENSIDAD: Calcula la densidad de un objeto de 500 g que ocupa un volumen de 250 cm³.", 
-      datos: "📊 DATOS: m = 500 g, v = 250 cm³, P = ?",
-      answer: 2, 
-      theory: "📜 P = m/v = 500 g / 250 cm³ = 2 g/cm³" },
-    
-    { question: "30. EJERCICIO DE PRINCIPIO DE PASCAL: En un taller, se utiliza una prensa hidráulica con émbolos de áreas 0.5 m² y 2.5 m². Si se desea levantar un auto que pesa 5000 N, ¿qué fuerza mínima se debe aplicar en el émbolo pequeño?", 
-      datos: "📊 DATOS: A₁ = 0.5 m², A₂ = 2.5 m², F₂ = 5000 N, F₁ = ?",
-      answer: 1000, 
-      theory: "📜 F₁/A₁ = F₂/A₂ → F₁/0.5 = 5000/2.5 → F₁/0.5 = 2000 → F₁ = 1000 N" }
-];
-
-// ========== FUNCIONES ==========
+// ========== FUNCIONES DEL CUESTIONARIO INICIAL ==========
 function actualizarBloqueo() {
     if (accesoConcedido) {
         vaultContent.classList.remove('vault-locked');
@@ -1161,7 +603,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// ---------- EXAMEN SOCIALES (simplificado) ----------
+// ========== EXAMEN SOCIALES (simplificado) ==========
+const examQuestionsSociales = [
+    { question: "1. Durante la Guerra de la Triple Alianza, ¿cuál era el interés geopolítico principal de Brasil que motivó el conflicto?", options: ["a) Anexar el territorio de las 'Misiones'.", "b) Romper el equilibrio entre los países de la Cuenca del Plata y asegurar navegación por el río Paraná.", "c) Defender al gobierno uruguayo que había sido derrocado.", "d) Controlar las minas de salitre en la región de Mato Grosso."], correct: 1, theory: "📜 Brasil buscaba libre navegación por el río Paraná y romper el equilibrio en la Cuenca del Plata." },
+    { question: "2. Según el texto, las tensiones fronterizas en América Latina bajaron significativamente en el periodo de:", options: ["a) 1824 a 1850", "b) 1851 a 1874", "c) 1911 a 1940", "d) 1980 a 1999"], correct: 3, theory: "📜 Se menciona que las tensiones bajaron entre 1980 y 1999." },
+    { question: "3. En la Guerra del Pacífico, ¿cuál fue el detonante económico directo del conflicto?", options: ["a) La confiscación de bienes de compañías chilenas por parte de Bolivia en el desierto de Atacama.", "b) El pacto de defensa mutua entre Perú y Bolivia apoyado por EE. UU.", "c) La toma del puerto de Antofagasta por parte de tropas peruanas.", "d) El bloqueo de las zonas de guano y azúcar en territorio chileno."], correct: 0, theory: "📜 Bolivia confiscó bienes de compañías chilenas que extraían minerales en Atacama." },
+    { question: "4. ¿Qué resolución se tomó respecto a Tiwintza tras el conflicto entre Ecuador y Perú (1995-1999)?", options: ["a) Ecuador obtuvo soberanía total sobre el Valle del Cenepa.", "b) Perú entregó 1 km² a Ecuador como propiedad privada en honor a sus soldados.", "c) Ecuador entregó Tiwintza a Perú a cambio de acceso al río Amazonas.", "d) Se estableció como una zona desmilitarizada bajo control de la ONU."], correct: 1, theory: "📜 Se entregó a Ecuador 1 km² en Tiwintza como propiedad privada." },
+    { question: "5. En relación con el conflicto colombiano, ¿qué hito ocurrió en el año 2001 para Ecuador?", options: ["a) Lucio Gutiérrez ofreció mediación de paz.", "b) Se acordó la instalación de la base de Manta.", "c) Se unió a la iniciativa andina contra el narcotráfico y creó un plan para la frontera norte.", "d) Redactó un documento para fortalecer la política exterior y seguridad con Colombia."], correct: 2, theory: "📜 2001: se une a iniciativa andina contra narcotráfico y crea plan para frontera norte." },
+];
+
+const trueFalseQuestionsSociales = [
+    { question: "16. ( ) Tras la Guerra del Cenepa, Ecuador obtuvo el derecho a la navegación por el río Amazonas y la soberanía total sobre esas aguas.", correct: false, theory: "📜 Obtuvo acceso a navegación, pero sin soberanía." },
+    { question: "17. ( ) En la Guerra de la Triple Alianza, el bando aliado estaba compuesto por Argentina, Brasil y Chile, quienes se enfrentaron a Paraguay.", correct: false, theory: "📜 Aliados: Argentina, Brasil y Uruguay." },
+];
+
+const developmentQuestionsSociales = [
+    { question: "41. Explica las causas principales de la Guerra de la Triple Alianza desde la perspectiva de Brasil y Argentina, y cuál fue el detonante final.", keywords: ["navegación", "paraná", "misiones"], theory: "📜 Brasil necesitaba navegar el Paraná para llegar a Mato Grosso; Argentina quería las Misiones. Detonante: Paraguay defendió al gobierno uruguayo derrocado." },
+];
+
 function mostrarExamenSociales() {
     modalTitle.innerText = "📝 EXAMEN DE SOCIALES";
     examSubmitted = false;
@@ -1262,7 +721,7 @@ function renderExamenSociales() {
     }
 }
 
-// ---------- EXAMEN INGLÉS (corregido, con matching funcional) ----------
+// ========== EXAMEN INGLÉS ==========
 const readingText = `A Busy and Stormy Day
 
 Tomorrow is going to be a very difficult day for Mark. It is widely known that the weather in this city changes very fast. The forecast says it is going to be stormy and extremely windy in the morning. As a result, Mark isn't going to walk to school. He is going to wake up at 6:00 AM, take a shower, and have breakfast at 6:30 AM. What time does he start his classes? He starts at 8:00 AM, so he cannot be late.
@@ -1274,9 +733,9 @@ function mostrarExamenIngles() {
     examSubmitted = false;
     examResultDiv.style.display = 'none';
     
-    userInglesAnswers = new Array(13).fill('');
+    userInglesAnswers = new Array(3).fill('');
     userWeatherMatches = new Array(5).fill(null);
-    examQuestionsDiv.innerHTML = ''; // Limpiar
+    examQuestionsDiv.innerHTML = '';
     renderExamenIngles();
 }
 
@@ -1294,13 +753,13 @@ function renderExamenIngles() {
     }
     html += '</div>';
     
-    // Pregunta 2 - Relacionar (matching) - CORREGIDO
+    // Pregunta 2 - Relacionar (matching)
     html += `<div class="question-block">`;
     html += `<div class="question-text-exam">2. Relaciona cada sustantivo con su adjetivo correspondiente:</div>`;
     
     const sustantivos = ["Fog", "Heat", "Ice", "Thunder", "Snow"];
     const adjetivos = ["Icy", "Snowy", "Foggy", "Hot", "Thunderous"];
-    const correctMatches = [2, 3, 0, 4, 1]; // Fog→Foggy(2), Heat→Hot(3), Ice→Icy(0), Thunder→Thunderous(4), Snow→Snowy(1)
+    const correctMatches = [2, 3, 0, 4, 1];
     
     if (!examSubmitted) {
         html += `<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 15px 0;">`;
@@ -1321,7 +780,6 @@ function renderExamenIngles() {
         html += `</div>`;
         html += `<div style="margin-top: 10px; color: #aaa; font-style: italic;">Haz clic en un sustantivo y luego en un adjetivo</div>`;
         
-        // Mostrar pares actuales
         html += `<div style="margin-top: 15px;">`;
         html += `<strong>Tus relaciones:</strong><br>`;
         for (let i = 0; i < 5; i++) {
@@ -1343,7 +801,7 @@ function renderExamenIngles() {
     }
     html += '</div>';
     
-    // Pregunta 3 (completar frases)
+    // Pregunta 3
     html += `<div class="question-block">`;
     html += `<div class="question-text-exam">3. Completa las siguientes oraciones con la forma correcta de "going to":</div>`;
     html += `<div>a) She _______________ (have) lunch at 1:00 PM.</div>`;
@@ -1372,22 +830,11 @@ function renderExamenIngles() {
     
     examQuestionsDiv.innerHTML = html;
     
-    // Lógica para matching (CORREGIDA)
     if (!examSubmitted) {
         let selectedNoun = null;
         
-        // Quitar event listeners anteriores para evitar duplicados
-        document.querySelectorAll('[data-weather-noun]').forEach(el => {
-            el.replaceWith(el.cloneNode(true));
-        });
-        document.querySelectorAll('[data-weather-adj]').forEach(el => {
-            el.replaceWith(el.cloneNode(true));
-        });
-        
-        // Agregar nuevos event listeners
         document.querySelectorAll('[data-weather-noun]').forEach(el => {
             el.addEventListener('click', function(e) {
-                // Quitar selección de todos los sustantivos
                 document.querySelectorAll('[data-weather-noun]').forEach(n => n.classList.remove('selected'));
                 this.classList.add('selected');
                 selectedNoun = parseInt(this.dataset.weatherNoun);
@@ -1399,7 +846,7 @@ function renderExamenIngles() {
                 if (selectedNoun !== null) {
                     let adjIdx = parseInt(this.dataset.weatherAdj);
                     userWeatherMatches[selectedNoun] = adjIdx;
-                    renderExamenIngles(); // Re-renderizar para mostrar cambios
+                    renderExamenIngles();
                 } else {
                     alert('Primero selecciona un sustantivo');
                 }
@@ -1415,129 +862,147 @@ function renderExamenIngles() {
     }
 }
 
-// ---------- EXAMEN CIENCIAS (30 preguntas) ----------
+// ========== EXAMEN CIENCIAS ==========
+// NOTA: Las preguntas 1-15 (opción múltiple) son TEXTO PURO basado en los documentos
+// Las preguntas 16-25 son verdadero/falso
+// Las preguntas 26-30 son PROBLEMAS PRÁCTICOS con operaciones matemáticas
+const examQuestionsCiencias = [
+    // OPCIÓN MÚLTIPLE (1-15) - TEXTO PURO basado en los documentos
+    { question: "1. Según el documento de Ciencias, ¿cuál de las siguientes estructuras geológicas de Sudamérica es la más antigua?", options: ["a) Cordillera de los Andes", "b) Escudos Guayanés, Brasilia y Patagonia", "c) La Amazonía", "d) Los páramos"], correct: 1, theory: "📘 Respuesta: b) Los escudos o macizos Guayanés, Brasilia y Patagonia son las estructuras más antiguas, como se menciona en la Unidad 5." },
+    { question: "2. ¿Qué región natural del Ecuador es considerada un 'hot spot' mundial de biodiversidad según el documento?", options: ["a) Galápagos", "b) El Chocó (Esmeraldas y norte de Manabí)", "c) Los páramos", "d) El matorral interandino"], correct: 1, theory: "📘 Respuesta: b) El Chocó es un bosque húmedo tropical y un hot spot mundial." },
+    { question: "3. De acuerdo con el documento, ¿cuál de estos animales es endémico de Galápagos?", options: ["a) El cóndor andino", "b) El oso de anteojos", "c) La iguana marina", "d) El delfín rosado"], correct: 2, theory: "📘 Respuesta: c) La iguana marina es una especie endémica de Galápagos." },
+    { question: "4. Según el texto, ¿qué zona natural presenta un clima cálido-húmedo?", options: ["a) El sur de Manabí", "b) El Chocó", "c) Los páramos", "d) El matorral interandino"], correct: 1, theory: "📘 Respuesta: b) El Chocó tiene bosques húmedos tropicales con clima cálido-húmedo." },
+    { question: "5. En la Unidad 5 del documento, ¿cuál NO es un objetivo de las áreas protegidas?", options: ["a) Conservación de biodiversidad", "b) Protección de fuentes de agua", "c) Oxigenación de los suelos", "d) Preservación de ecosistemas"], correct: 2, theory: "📘 Respuesta: c) La oxigenación de los suelos no es un objetivo directo de las áreas protegidas." },
+    { question: "6. Según el documento, ¿qué corriente marina es responsable del fenómeno de 'El Niño' en Ecuador?", options: ["a) Corriente de Humboldt", "b) Corriente cálida sur ecuatorial", "c) Corriente de Perú", "d) Corriente de Cromwell"], correct: 1, theory: "📘 Respuesta: b) La corriente cálida sur ecuatorial trae lluvias abundantes y causa el fenómeno de El Niño." },
+    { question: "7. ¿Cuál de los siguientes cuerpos tiene menor densidad según la Unidad 6?", options: ["a) Una piedra", "b) Un costal de algodón", "c) Un bloque de hierro", "d) Agua"], correct: 1, theory: "📘 Respuesta: b) El costal de algodón tiene menor densidad porque ocupa más volumen con menos masa." },
+    { question: "8. En la Unidad 6, ¿qué material NO es considerado un fluido?", options: ["a) Agua", "b) Aire", "c) Aceite", "d) Sal"], correct: 3, theory: "📘 Respuesta: d) La sal es un sólido granular, no un fluido como tal." },
+    { question: "9. ¿Cuál es la fórmula correcta de la densidad según el documento?", options: ["a) ρ = m × V", "b) ρ = m/V", "c) ρ = V/m", "d) ρ = m + V"], correct: 1, theory: "📘 Respuesta: b) Densidad = masa / volumen (ρ = m/V)." },
+    { question: "10. Según la tabla de biomoléculas, ¿qué biomolécula NO es orgánica?", options: ["a) Proteína", "b) Lípido", "c) Agua", "d) Glúcido"], correct: 2, theory: "📘 Respuesta: c) El agua es inorgánica; las demás son orgánicas." },
+    { question: "11. De acuerdo con la tabla del documento, ¿en qué estructura celular se encuentran principalmente los ácidos nucleicos?", options: ["a) Membrana celular", "b) Citoplasma", "c) Núcleo y ribosomas", "d) Mitocondrias"], correct: 2, theory: "📘 Respuesta: c) Los ácidos nucleicos (ADN/ARN) están en el núcleo y ribosomas." },
+    { question: "12. ¿Qué región natural está sobre los 3000 metros y es fuente de agua dulce según el documento?", options: ["a) Amazonía", "b) Páramos", "c) Chocó", "d) Galápagos"], correct: 1, theory: "📘 Respuesta: b) Los páramos están sobre los 3000 m y son fuentes de agua dulce." },
+    { question: "13. ¿Qué tipo de bosque predomina en los Andes noroccidentales según el documento?", options: ["a) Bosque seco", "b) Bosque nublado", "c) Bosque de manglar", "d) Bosque de eucalipto"], correct: 1, theory: "📘 Respuesta: b) Los Andes noroccidentales tienen bosques nublados con mucha biodiversidad." },
+    { question: "14. ¿Cuántos de los 10 hot spots del mundo se encuentran en Ecuador según el documento?", options: ["a) 1", "b) 2", "c) 3", "d) 4"], correct: 2, theory: "📘 Respuesta: c) Ecuador tiene 3 de los 10 hot spots del mundo." },
+    { question: "15. ¿Cuál es la importancia del carbono para la vida según el documento?", options: ["a) Es el elemento más abundante en la atmósfera", "b) Es la base de las moléculas orgánicas", "c) Es el principal componente del agua", "d) No es importante para los seres vivos"], correct: 1, theory: "📘 Respuesta: b) El carbono es la base de las moléculas orgánicas como proteínas, grasas, carbohidratos y ADN." },
+
+    // VERDADERO/FALSO (16-25) - basado en los documentos
+    { question: "16. ( ) Las Islas Galápagos son de origen volcánico y tienen especies endémicas.", correct: true, theory: "✅ Verdadero. El documento menciona que Galápagos tiene islas volcánicas y especies endémicas." },
+    { question: "17. ( ) El matorral seco predomina en la zona del Chocó ecuatoriano.", correct: false, theory: "❌ Falso. El Chocó tiene bosques húmedos tropicales, no matorral seco." },
+    { question: "18. ( ) Los bosques nublados de los Andes orientales alimentan la Amazonía con sus aguas.", correct: true, theory: "✅ Verdadero. De sus pendientes bajan aguas que alimentan la Amazonía." },
+    { question: "19. ( ) La corriente fría de Humboldt provoca un aumento de las precipitaciones en la costa ecuatoriana.", correct: false, theory: "❌ Falso. La corriente de Humboldt es fría y genera aridez; las lluvias se asocian a la corriente cálida del Niño." },
+    { question: "20. ( ) El principio de Pascal establece que la presión en un fluido se transmite con igual intensidad en todas direcciones.", correct: true, theory: "✅ Verdadero. Es la definición del principio de Pascal." },
+    { question: "21. ( ) Los páramos ecuatorianos se caracterizan por tener árboles de gran porte como el polylepis que superan los 10 m de altura.", correct: false, theory: "❌ Falso. El polylepis en los páramos suele ser arbustivo o árboles bajos, no de gran porte." },
+    { question: "22. ( ) El fenómeno del Niño extremo provoca en la costa ecuatoriana un aumento de la temperatura del mar y lluvias torrenciales.", correct: true, theory: "✅ Verdadero. El documento menciona que la corriente cálida trae lluvias abundantes y causa el fenómeno del Niño." },
+    { question: "23. ( ) Según la tabla del documento, las sales minerales se localizan en el núcleo y el citoplasma de la célula.", correct: true, theory: "✅ Verdadero. La tabla indica que las sales minerales están en núcleo y citoplasma." },
+    { question: "24. ( ) El Parque Nacional Yasuní se asienta sobre el Escudo Guayanés, una de las estructuras geológicas más antiguas.", correct: false, theory: "❌ Falso. Yasuní está en la cuenca amazónica sobre sedimentos recientes, no sobre el escudo." },
+    { question: "25. ( ) La fórmula del principio de Arquímedes para el empuje es: Empuje = ρ · g · V.", correct: true, theory: "✅ Verdadero. El documento indica que el empuje se calcula multiplicando densidad del líquido, gravedad y volumen." },
+
+    // PROBLEMAS PRÁCTICOS (26-30) - CON OPERACIONES MATEMÁTICAS CORREGIDAS
+    { 
+        question: "26. PROBLEMA (Arquímedes - multiplicación): Calcula el empuje que experimenta un objeto de volumen 2 m³ sumergido completamente en agua (ρ = 1000 kg/m³). Considera g = 9.8 m/s².",
+        datos: "📊 DATOS: V = 2 m³, ρ = 1000 kg/m³, g = 9.8 m/s²",
+        answer: 19600,
+        theory: "📘 Fórmula: Empuje = ρ · g · V = 1000 × 9.8 × 2 = 19600 N"
+    },
+    { 
+        question: "27. PROBLEMA (Densidad - división): Un cuerpo tiene una masa de 100 kg y ocupa un volumen de 0.125 m³. Calcula su densidad en kg/m³.",
+        datos: "📊 DATOS: m = 100 kg, V = 0.125 m³",
+        answer: 800,
+        theory: "📘 Fórmula: ρ = m / V = 100 kg / 0.125 m³ = 800 kg/m³"
+    },
+    { 
+        question: "28. PROBLEMA (Pascal - multiplicación y división): En una prensa hidráulica, el émbolo pequeño tiene un área de 0.5 m² y el émbolo grande de 2.5 m². Si se aplica una fuerza de 200 N en el émbolo pequeño, ¿qué fuerza se obtiene en el émbolo grande?",
+        datos: "📊 DATOS: A₁ = 0.5 m², A₂ = 2.5 m², F₁ = 200 N",
+        answer: 1000,
+        theory: "📘 F₁/A₁ = F₂/A₂ → 200/0.5 = F₂/2.5 → 400 = F₂/2.5 → F₂ = 400 × 2.5 = 1000 N"
+    },
+    { 
+        question: "29. PROBLEMA (Arquímedes - peso aparente): Un objeto pesa 50 N en el aire y 30 N sumergido en agua. Calcula el volumen del objeto en m³. (ρ_agua = 1000 kg/m³, g = 10 m/s² para simplificar)",
+        datos: "📊 DATOS: Peso_real = 50 N, Peso_aparente = 30 N, ρ = 1000 kg/m³, g = 10 m/s²",
+        answer: 0.002,
+        theory: "📘 Empuje = Peso_real - Peso_aparente = 50 - 30 = 20 N. Empuje = ρ·g·V → V = Empuje/(ρ·g) = 20/(1000×10) = 0.002 m³"
+    },
+    { 
+        question: "30. PROBLEMA (Flotación - porcentaje): Un iceberg tiene una densidad de 917 kg/m³ y flota en agua de mar (ρ = 1025 kg/m³). Calcula el porcentaje del volumen del iceberg que permanece sumergido. (Redondea al entero más cercano)",
+        datos: "📊 DATOS: ρ_hielo = 917 kg/m³, ρ_mar = 1025 kg/m³",
+        answer: 89,
+        theory: "📘 % sumergido = (ρ_hielo / ρ_mar) × 100 = (917/1025) × 100 ≈ 89.46% ≈ 89%"
+    }
+];
+
 function mostrarExamenCiencias() {
     modalTitle.innerText = "📝 EXAMEN DE CIENCIAS";
     examSubmitted = false;
     examResultDiv.style.display = 'none';
-    
-    // Inicializar arrays
-    userAnswers = new Array(15).fill(null); // opción múltiple
-    userTFAnswers = new Array(10).fill(null); // verdadero/falso
-    userDevelopmentAnswers = new Array(5).fill(''); // desarrollo (numérico)
-    
+    userAnswers = new Array(15).fill(null);
+    userTFAnswers = new Array(10).fill(null);
+    userDevelopmentAnswers = new Array(5).fill('');
     renderExamenCiencias();
 }
 
 function renderExamenCiencias() {
     let html = '<h2>📝 PARTE I: OPCIÓN MÚLTIPLE (1-15)</h2>';
-    
-    // Opción múltiple (15 preguntas)
-    for (let i = 0; i < 15; i++) {
-        const q = examQuestionsCiencias[i];
-        let userAns = userAnswers[i];
+    for (let i=0; i<15; i++) {
+        let q = examQuestionsCiencias[i]; let userAns = userAnswers[i];
         html += `<div class="question-block"><div class="question-text-exam">${q.question}</div><div class="options-exam">`;
-        q.options.forEach((opt, optIdx) => {
-            let optClass = 'option-exam';
-            if (!examSubmitted) {
-                optClass += ' clickable';
-                if (userAns === optIdx) optClass += ' selected';
-                html += `<div class="${optClass}" data-mc="${i}" data-opt="${optIdx}">${opt}</div>`;
-            } else {
-                if (optIdx === q.correct) optClass += ' correct-answer';
-                if (userAns === optIdx) {
-                    optClass += (userAns === q.correct) ? ' selected-correct' : ' selected-incorrect';
-                }
-                html += `<div class="${optClass}">${opt}</div>`;
+        q.options.forEach((opt,optIdx)=>{
+            let cls = 'option-exam' + (!examSubmitted ? ' clickable' : '');
+            if (!examSubmitted && userAns===optIdx) cls += ' selected';
+            else if (examSubmitted) {
+                if (optIdx===q.correct) cls += ' correct-answer';
+                if (userAns===optIdx) cls += (userAns===q.correct) ? ' selected-correct' : ' selected-incorrect';
             }
+            html += `<div class="${cls}" data-mc="${i}" data-opt="${optIdx}">${opt}</div>`;
         });
         html += '</div>';
         if (examSubmitted) html += `<div class="feedback-theory">${q.theory}</div>`;
         html += '</div>';
     }
-    
+
     html += '<h2>✅ PARTE II: VERDADERO/FALSO (16-25)</h2>';
-    for (let i = 15; i < 25; i++) {
-        const q = examQuestionsCiencias[i];
-        let idx = i - 15; // índice en userTFAnswers
-        let userAns = userTFAnswers[idx];
-        html += `<div class="question-block"><div class="question-text-exam">${q.question}</div>`;
-        html += `<div class="true-false-container">`;
-        
+    for (let i=15; i<25; i++) {
+        let q = examQuestionsCiencias[i]; let idx = i-15; let userAns = userTFAnswers[idx];
+        html += `<div class="question-block"><div class="question-text-exam">${q.question}</div><div class="true-false-container">`;
         if (!examSubmitted) {
-            let trueClass = (userAns === true) ? ' selected-true' : '';
-            let falseClass = (userAns === false) ? ' selected-false' : '';
-            html += `<div class="tf-option clickable-tf ${trueClass}" data-tf="${idx}" data-val="true">Verdadero</div>`;
-            html += `<div class="tf-option clickable-tf ${falseClass}" data-tf="${idx}" data-val="false">Falso</div>`;
+            let trueCls = 'tf-option clickable-tf' + (userAns===true?' selected-true':'');
+            let falseCls = 'tf-option clickable-tf' + (userAns===false?' selected-false':'');
+            html += `<div class="${trueCls}" data-tf="${idx}" data-val="true">Verdadero</div>`;
+            html += `<div class="${falseCls}" data-tf="${idx}" data-val="false">Falso</div>`;
         } else {
-            let trueClass = q.correct ? ' correct-tf' : (userAns === true ? ' incorrect-tf' : '');
-            let falseClass = !q.correct ? ' correct-tf' : (userAns === false ? ' incorrect-tf' : '');
-            html += `<div class="tf-option ${trueClass}">Verdadero</div>`;
-            html += `<div class="tf-option ${falseClass}">Falso</div>`;
+            let trueCls = q.correct ? 'correct-tf' : (userAns===true?'incorrect-tf':'');
+            let falseCls = !q.correct ? 'correct-tf' : (userAns===false?'incorrect-tf':'');
+            html += `<div class="tf-option ${trueCls}">Verdadero</div><div class="tf-option ${falseCls}">Falso</div>`;
         }
-        html += `</div>`;
+        html += '</div>';
         if (examSubmitted) html += `<div class="feedback-theory">${q.theory}</div>`;
         html += '</div>';
     }
-    
+
     html += '<h2>✍ PARTE III: PROBLEMAS PRÁCTICOS (26-30)</h2>';
-    for (let i = 25; i < 30; i++) {
-        const q = examQuestionsCiencias[i];
-        let idx = i - 25; // índice en userDevelopmentAnswers
-        let userAns = userDevelopmentAnswers[idx] || '';
+    for (let i=25; i<30; i++) {
+        let q = examQuestionsCiencias[i]; let idx = i-25; let userAns = userDevelopmentAnswers[idx] || '';
         html += `<div class="question-block"><div class="question-text-exam">${q.question}</div>`;
         html += `<div class="datos-box">${q.datos}</div>`;
         if (!examSubmitted) {
-            html += `<input type="number" class="blank-input" data-dev-num="${idx}" value="${userAns}" placeholder="Escribe solo el número" style="width: 200px;">`;
-            html += `<div style="margin-top: 5px; color: #aaa; font-size: 0.9rem;">💡 Escribe únicamente el valor numérico (sin unidades)</div>`;
+            html += `<input type="number" class="blank-input" data-dev-num="${idx}" value="${userAns}" placeholder="Valor numérico" step="any">`;
         } else {
-            let userNum = parseFloat(userAns);
-            let correctNum = q.answer;
-            let isCorrect = !isNaN(userNum) && userNum === correctNum;
-            html += `<div style="background:#2a2a3a; padding:15px;">`;
-            html += `<div>Tu respuesta: <strong>${userAns || 'No respondió'}</strong></div>`;
-            html += `<div>Resultado: ${isCorrect ? '✅ Correcto' : '❌ Incorrecto'}</div>`;
-            html += `</div>`;
+            let userNum = parseFloat(userAns); let correct = q.answer; let isCorrect = !isNaN(userNum) && Math.abs(userNum-correct) < 0.01;
+            html += `<div style="background:#2a2a3a; padding:15px;">Tu respuesta: <strong>${userAns || '—'}</strong> ${isCorrect?'✅':'❌'} (correcto: ${correct})</div>`;
             html += `<div class="feedback-theory">${q.theory}</div>`;
         }
         html += '</div>';
     }
-    
+
     examQuestionsDiv.innerHTML = html;
-    
+
     if (!examSubmitted) {
-        // Eventos para opción múltiple
-        document.querySelectorAll('[data-mc]').forEach(el => {
-            el.addEventListener('click', e => {
-                let idx = e.target.dataset.mc;
-                let opt = parseInt(e.target.dataset.opt);
-                userAnswers[idx] = opt;
-                renderExamenCiencias();
-            });
-        });
-        
-        // Eventos para verdadero/falso
-        document.querySelectorAll('.clickable-tf').forEach(el => {
-            el.addEventListener('click', e => {
-                let idx = e.target.dataset.tf;
-                let val = e.target.dataset.val === 'true';
-                userTFAnswers[idx] = val;
-                renderExamenCiencias();
-            });
-        });
-        
-        // Eventos para problemas numéricos
-        document.querySelectorAll('[data-dev-num]').forEach(el => {
-            el.addEventListener('input', e => {
-                let idx = e.target.dataset.devNum;
-                userDevelopmentAnswers[idx] = e.target.value;
-            });
-        });
+        document.querySelectorAll('[data-mc]').forEach(el=>{el.addEventListener('click',e=>{ let idx=e.target.dataset.mc; let opt=parseInt(e.target.dataset.opt); userAnswers[idx]=opt; renderExamenCiencias(); });});
+        document.querySelectorAll('.clickable-tf').forEach(el=>{el.addEventListener('click',e=>{ let idx=e.target.dataset.tf; let val=e.target.dataset.val==='true'; userTFAnswers[idx]=val; renderExamenCiencias(); });});
+        document.querySelectorAll('[data-dev-num]').forEach(el=>{el.addEventListener('input',e=>{ let idx=e.target.dataset.devNum; userDevelopmentAnswers[idx]=e.target.value; });});
     }
 }
 
-// Entregar examen
-submitExamBtn.addEventListener('click', () => {
+// ========== ENTREGAR EXAMEN ==========
+submitExamBtn.addEventListener('click',()=>{
     if (examSubmitted) return;
     
     if (currentExamType === 'sociales') {
@@ -1586,17 +1051,16 @@ submitExamBtn.addEventListener('click', () => {
         let correctMC = userAnswers.reduce((acc, ans, idx) => acc + (ans === examQuestionsCiencias[idx].correct ? 1 : 0), 0);
         let correctTF = userTFAnswers.reduce((acc, ans, idx) => acc + (ans === examQuestionsCiencias[idx+15].correct ? 1 : 0), 0);
         
-        // Calcular respuestas correctas en problemas
         let correctProblems = 0;
         for (let i = 0; i < 5; i++) {
-            let userAns = parseFloat(userDevelopmentAnswers[i]);
+            let userNum = parseFloat(userDevelopmentAnswers[i]);
             let correctAns = examQuestionsCiencias[25 + i].answer;
-            if (!isNaN(userAns) && userAns === correctAns) {
+            if (!isNaN(userNum) && Math.abs(userNum - correctAns) < 0.01) {
                 correctProblems++;
             }
         }
         
-        let total = 15 + 10 + 5; // 30 preguntas totales
+        let total = 15 + 10 + 5;
         let correct = correctMC + correctTF + correctProblems;
         let porcentaje = (correct / total) * 100;
         
@@ -1617,3 +1081,4 @@ submitExamBtn.addEventListener('click', () => {
 </script>
 </body>
 </html>
+
